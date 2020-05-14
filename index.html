@@ -3,19 +3,16 @@
 		<script>
 			function test()
 			{
-				sRub = "nom";
-				sNom = localStorage.getItem(sRub);
-				if (!sNom)
-				{
-					sNom = prompt("Nom ?");
-					localStorage.setItem(sRub, sNom);
-				}
-				document.querySelector("body").textContent = sNom;
+				i = document.querySelector("img");
+				if (i.src == "img4k.png")
+					i.src = "imgNormal.png";
+				else
+					i.src = "img4k.png";
 			}
 		</script>
 	</head>
 	<body>
-		<input type="button" onclick="test();">
-		</input>
+		<image src="img4k.png" onclick="test();">
+		</image>
 	</body>
 </html>
