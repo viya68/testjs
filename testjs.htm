@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script>
+			function test()
+			{
+				sRub = "nom";
+				sNom = localStorage.getItem(sRub);
+				if (!sNom)
+				{
+					sNom = prompt("Nom ?");
+					localStorage.setItem(sRub, sNom);
+				}
+				document.querySelector("body").textContent = sNom;
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" onclick="test();">
+		</input>
+	</body>
+</html>
